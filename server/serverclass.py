@@ -67,6 +67,8 @@ class MyDictory(object):
         if res1 != None:
             # print('我已经收到１１１１！')
             conn.send(b'Exist')
+            return      # 退回到上一级命令
+        # 如果注册名不存在，向数据库中添加新的用户名和密码
         else:
             # print('我已经收到2222！')
             sql = "insert into user (username, passwd)\
@@ -74,6 +76,7 @@ class MyDictory(object):
             self.myhelp.work(sql)
             # print('我已经收到3333！')
             conn.send(b'OK')
+            return
 
     # 处理用户登录申请
     def do_login(self,conn,data):

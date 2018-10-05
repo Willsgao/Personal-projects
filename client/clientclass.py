@@ -121,6 +121,7 @@ class ClientVisit(object):
                 except KeyboardInterrupt:
                     return                        
 
+
         while True:
             visit_menu()
             try:
