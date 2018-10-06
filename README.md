@@ -1,2 +1,1 @@
 # elec-dictionary
-# e-dictionary
